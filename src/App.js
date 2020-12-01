@@ -6,20 +6,21 @@ import apiResponse from './api.js'
 class App extends Component {
 
   state = {
-    api: []
+    api: apiResponse
   }
 
-  fetchDogs = () => {
-    return this.setState({
-      api: apiResponse
-    })
-  }
+  // fetchDogs = () => {
+  //   return this.setState({
+  //     api: apiResponse
+  //   })
+  // }
 
   render() {
-    console.log(this.state.api)
+    // console.log(this.state.api)
+    //   console.log(this.state.api.apiResponse)
     return (
       <div className="app">
-        <DogsList fetchDogs={this.fetchDogs()} />
+        <DogsList allDogs={this.state.api.apiResponse} />
       </div>
     );
   }
