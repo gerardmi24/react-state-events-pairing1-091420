@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import DogCard from '../Components/DogCard'
+import DogCard from '../Components/DogCard';
 
 class DogsList extends Component {
 
   renderDogs = () => {
-    return this.props.allDogs.map((dog) => <DogCard dog={dog} key={dog.id} />)
+    return this.props.allDogs.map((dog) => <DogCard dog={dog} key={dog.id} addToFavs={this.props.addToFavs} />)
   }
 
   render() {
